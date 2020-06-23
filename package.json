@@ -1,0 +1,23 @@
+{
+  "name": "101-algoritmos-lisp",
+  "version": "1.0.0",
+  "engines": {
+    "node": "10.15.2"
+  },
+  "description": "App to lear lisp using 101 algorithm",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Niko-Orozco/101-algoritmos-lisp.git"
+  },
+  "author": "Nicolas Orozco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Niko-Orozco/101-algoritmos-lisp/issues"
+  },
+  "homepage": "https://github.com/Niko-Orozco/101-algoritmos-lisp#readme"
+}

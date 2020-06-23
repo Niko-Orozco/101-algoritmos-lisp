@@ -1,0 +1,18 @@
+#footer {
+    margin-top: 3%;
+    background: #00365D !important;
+}
+
+#footer p{
+    color: aliceblue;
+}
+
+#footer h2{
+    color: aliceblue;
+}
+
+#footer .h6{
+    /*height: 25px;*/  
+    color: aliceblue;
+    /*padding-bottom: 1px;*/
+}
