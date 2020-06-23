@@ -37,6 +37,8 @@ app.use(express.urlencoded({extended: false}) );
 app.use(methodOverride('_method')); //para que los formularios puedan enviar metodos como put and delete.
 
 
+///////// Routs
+app.use(require('./routes/index'));
 
 //////// Static Files
 app.use('/static', express.static(path.join(__dirname, 'public')));

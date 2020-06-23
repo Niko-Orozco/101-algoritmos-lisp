@@ -19,5 +19,15 @@
   "bugs": {
     "url": "https://github.com/Niko-Orozco/101-algoritmos-lisp/issues"
   },
-  "homepage": "https://github.com/Niko-Orozco/101-algoritmos-lisp#readme"
+  "homepage": "https://github.com/Niko-Orozco/101-algoritmos-lisp#readme",
+  "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.3",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "http": "0.0.1-security",
+    "method-override": "^3.0.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4",
+    "path": "^0.12.7"
+  }
 }
