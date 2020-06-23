@@ -16,3 +16,7 @@
     color: aliceblue;
     /*padding-bottom: 1px;*/
 }
+
+#nav-izq{
+    text-align: right;
+}
