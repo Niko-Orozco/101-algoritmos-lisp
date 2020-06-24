@@ -1,18 +1,13 @@
-#footer {
-    margin-top: 3%;
-    background: #00365D !important;
+.navbar{
+  background: url("../images/fondo.png") ;
 }
 
-#footer p{
-    color: aliceblue;
-}
-
-#footer h2{
-    color: aliceblue;
-}
-
-#footer #h6{  
-    color: aliceblue;
+footer{
+  background: url("../images/fondo.png") ;
+  bottom: -40px;
+  width: 100%;
+  height: 70px;
+  position: relative;
 }
 
 .footer-color{
@@ -22,10 +17,6 @@
 #info{
     margin: 50px;
     text-align: left;
-}
-
-#fondo_landing{
-    background: url("../images/fondo.png") ;
 }
 
 #Rombo{
@@ -162,9 +153,3 @@
     background-color: #e5dce9;
   }
 
-  .pad-footer{
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    height: 40px;
-  }
