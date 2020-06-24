@@ -4,8 +4,8 @@ const router = express.Router(); //para creación de rutas
 const passport = require('passport');
 
 
-router.get('/menu', (req, res) => {
-    res.render('/modules/menu');
+router.get('/algorithm/:id', (req, res) => {
+    res.render('/modules/algoritmo');
 });
 
 module.exports = router;

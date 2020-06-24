@@ -7,8 +7,12 @@ router.get('/', (req, res) => {
     res.render('index'); 
 });
 
-router.get('/algorithm', (req, res) => {
+router.get('/menu', (req, res) => {
     res.render('modules/menu');
+});
+
+router.get('/algorithm/:id', (req, res) => {
+    res.render('modules/algoritmo');
 });
 
 module.exports = router;
