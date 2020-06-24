@@ -11,7 +11,7 @@
     color: aliceblue;
 }
 
-#footer .h6{
+#footer #h6{
     /*height: 25px;*/  
     color: aliceblue;
     /*padding-bottom: 1px;*/
@@ -24,4 +24,13 @@
 #info{
     margin: 50px;
     text-align: left;
+}
+
+#fondo_landing{
+    background: url("../images/fondo.png") ;
+    font-family: Lusitana;
+}
+
+.nav-link{
+    color: white !important;
 }
