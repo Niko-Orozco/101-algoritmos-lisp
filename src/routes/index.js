@@ -12,7 +12,8 @@ router.get('/menu', (req, res) => {
 });
 
 router.get('/algorithm/:id', (req, res) => {
-    res.render('modules/algoritmo');
+    var mod = req.params.id;
+    res.render('modules/algoritmo', {mod});
 });
 
 module.exports = router;
