@@ -28,6 +28,14 @@
     background: url("../images/fondo.png") ;
 }
 
+.pad-footer{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 40px;
+  align-self: flex-end;
+}
+
 #Rombo{
     width: 100%;
     height: 100%;
@@ -162,9 +170,4 @@
     background-color: #e5dce9;
   }
 
-  .pad-footer{
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    height: 40px;
-  }
+  
