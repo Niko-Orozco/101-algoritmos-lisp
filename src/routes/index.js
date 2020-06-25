@@ -12,7 +12,13 @@ router.get('/menu', (req, res) => {
 });
 
 router.get('/algorithm/:id', (req, res) => {
-    res.render('modules/algoritmo');
+    var mod = req.params.id;
+    var enunciado="";
+    var codigo="";
+    var tema="";
+    var definicion="";
+    var linea="";
+    res.render('modules/algoritmo', {mod, enunciado, codigo, tema, definicion, linea});
 });
 
 module.exports = router;

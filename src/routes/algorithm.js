@@ -6,6 +6,7 @@ const passport = require('passport');
 
 router.get('/algorithm/:id', (req, res) => {
     res.render('/modules/algoritmo');
+    //Back
 });
 
 module.exports = router;

@@ -1,5 +1,23 @@
-.navbar{
-  background: url("../images/fondo.png") ;
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+.Steps_flex_horizontales{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+.Steps_flex_verticales{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
 }
 
 footer{
@@ -27,62 +45,19 @@ footer{
 
 /*Estilos para el Nav:*/
 .navbar {
-    background-color: #2b45ed;
+    background: url("../images/fondo.png");
   }
   .navbar .navbar-brand {
     color: #000000;
   }
-  .navbar .navbar-brand:hover,
-  .navbar .navbar-brand:focus {
-    color: #000000;
-  }
-  .navbar .navbar-text {
-    color: #fffefe;
-  }
-  .navbar .navbar-text a {
-    color: #000000;
-  }
-  .navbar .navbar-text a:hover,
-  .navbar .navbar-text a:focus {
-    color: #000000; 
-  }
-  .navbar .navbar-nav .nav-link {
+  .navbar .navbar-nav .nav-link {/*Color items*/
     color: #fffefe;
     border-radius: .25rem;
     margin: 0 0.25em;
   }
   .navbar .navbar-nav .nav-link:not(.disabled):hover,
   .navbar .navbar-nav .nav-link:not(.disabled):focus {
-    color: #c8ff00e0;
-  }
-  .navbar .navbar-nav .nav-item.active .nav-link,
-  .navbar .navbar-nav .nav-item.active .nav-link:hover,
-  .navbar .navbar-nav .nav-item.active .nav-link:focus,
-  .navbar .navbar-nav .nav-item.show .nav-link,
-  .navbar .navbar-nav .nav-item.show .nav-link:hover,
-  .navbar .navbar-nav .nav-item.show .nav-link:focus {
-    color: #000000;
-    background-color: #e5dce9;
-  }
-  .navbar .navbar-toggle {
-    border-color: #e5dce9;
-  }
-  .navbar .navbar-toggle:hover,
-  .navbar .navbar-toggle:focus {
-    background-color: #e5dce9;
-  }
-  .navbar .navbar-toggle .navbar-toggler-icon {
-    color: #fffefe;
-  }
-  .navbar .navbar-collapse,
-  .navbar .navbar-form {
-    border-color: #fffefe;
-  }
-  .navbar .navbar-link {
-    color: #fffefe;
-  }
-  .navbar .navbar-link:hover {
-    color: #000000;
+    background-color: rgb(255, 255, 255);/*Mouse encima*/
   }
   
   @media (max-width: 575px) {
@@ -152,4 +127,3 @@ footer{
     color: #000000;
     background-color: #e5dce9;
   }
-
