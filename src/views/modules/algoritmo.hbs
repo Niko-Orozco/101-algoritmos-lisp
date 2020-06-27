@@ -24,25 +24,33 @@
          <!--Ejecución/Botones y Paso a paso-->
         <div class="container">
                 <div class="row">
+                   
                         <div class="col-lg-6 col-md-6 col-sm-12">
                                 <div class="Steps_flex_horizontales">
-                                        <textarea style="height: 30px;" placeholder="Entrada:">{{input}}</textarea><br>
-                                        <textarea style="height: 90px ;" placeholder="Salida" disabled>Salida: {{output}}</textarea>
+                                        <textarea style="height: 30px;" placeholder="Entrada:">{{input}}</textarea>
+                                        <textarea style="height: 90px; margin-top: 25px" placeholder="Salida:" disabled> {{output}}</textarea>
                                 </div>
-                                <form action="" class="mt-3">
-                                        <button href="" class="btn btn-success rounded-pill" id="seg"><i class="fa fa-terminal"></i>  Ejecutar</button>       
-                                </form>
+                               <div class="mt-3">
+                                        <form action="/algorithm/{{mod}}" method="POST">
+                                                <button id="run" type="submit" class="btn btn-success rounded-pill"><i class="fa fa-terminal"></i>  Ejecutar</button>       
+                                        </form> 
+                               </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
                                 <div class="Steps_flex_verticales">
                                                 <textarea style="height: 144px; padding: 20px" placeholder="DEFINICIÓN" disabled>{{definicion}}</textarea>
                                                 <textarea style="height: 144px; padding: 20px" placeholder="LINEA" disabled>{{linea}}</textarea>
                                 </div>
-                                <form action="" class="mt-3">
-                                        <button href="" class="btn btn-primary rounded-pill" id="ant"><i class="fa fa-arrow-left"></i>  Anterior</button>
-                                        <button href="" class="btn btn-primary rounded-pill" id="seg">Siguiente  <i class="fa fa-arrow-right"></i></button>        
-                                </form>
-                        </div>
+
+                                <form action="/algorithm/sgt/{{mod}}" method="GET" class="mt-3">
+                                        <button type="submit" class="btn btn-primary rounded-pill"><i class="fa fa-arrow-right"></i> Siguiente </button>        
+                                </form> 
+                                <form action="/algorithm/ant/{{mod}}" method="GET" class="mt-3">
+                                        <button type="submit" class="btn btn-primary rounded-pill"><i class="fa fa-arrow-left"></i>  Anterior</button>   
+                                </form> 
+                        </div>    
+                        <a href="/algorithm/{{sig}}">siguiente</a>
+                        <a href="/algorithm/{{ant}}">Anterior</a>
                 </div>
         </div>
 </div>

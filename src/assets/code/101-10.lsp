@@ -4,8 +4,7 @@ pagó 20.000 pesos por 3 litros de leche y le dieron 8.000
 pesos de cambio.|#
 (defun PrecioUnidad()
 	(setq unidad (/ (- 20000 8000) 3))
-	(print "El precio de la leche por unidad es de: ")
-	(write unidad)
+	(print "El precio de la leche por unidad es de: ~d" unidad)
 )
 
 (PrecioUnidad)
@@ -18,11 +17,11 @@ la cual tiene un descuento del 22% y el precio del
 pantalón que le costó 27.500 pesos el cual tiene un 
 descuento del 15%|#
 (defun Costo()
-	(defvar chaqueta (- 32000 (* 32000 0.22)))
-	(defvar pantalon (- 27500 (* 27500 0.15)))
-	(defvar sum (+ chaqueta pantalon))
-	(print "El precio total es de: ")
-    (write sum)
+	(setq chaqueta (- 32000 (* 32000 0.22)))
+	(setq pantalon (- 27500 (* 27500 0.15)))
+	(setq sum (+ chaqueta pantalon))
+	(print "El precio total es de: ~d" sum)
 )
 
 (Costo)
+

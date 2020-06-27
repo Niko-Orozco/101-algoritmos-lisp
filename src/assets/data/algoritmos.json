@@ -1,0 +1,37 @@
+[
+    {
+        "1":
+        {
+            "1": "Construir un algoritmo en Lisp que dé a conocer el precio de la leche que compro Julián, teniendo como base que el pagó 20.000 pesos por 3 litros de leche y le dieron 8.000  pesos de cambio.",
+            "2": "(defun PrecioUnidad()\n\t(setq unidad (/ (- 20000 8000) 3))\n\t(print \"El precio de la leche por unidad es de: ~d\" unidad)\n)\n\n(PrecioUnidad)",
+            "3": 
+                {
+                    "1":"Asignación", 
+                    "2":"Impresión"
+                },
+            "4": 
+                {
+                    "1":"(setq unidad (/ (- 20000 8000) 3))", 
+                    "2": "(print \"El precio de la leche por unidad es de: ~d\" unidad)"
+                },
+            "5": 2
+        },
+
+        "2":
+        {
+            "1": "Construir un algoritmo en Lisp que le dé a conocer a juan el precio de la chaqueta VJT que compró por 32.000 la cual tiene un descuento del 22% y el precio del pantalón que le costó 27.500 pesos el cual tiene un descuento del 15%.",
+            "2": "(defun Costo()\n\t(setq chaqueta (- 32000 (* 32000 0.22)))\n\t(setq pantalon (- 27500 (* 27500 0.15)))\n\t(setq sum (+ chaqueta pantalon))\n\t(print \"El precio total es de: ~d\" sum)\n)\n\n(Costo)",
+            "3": 
+                {
+                    "1":"Asignación", 
+                    "2":"Impresión"
+                },
+            "4": 
+                {
+                    "Asignación":"(setq chaqueta (- 32000 (* 32000 0.22)))", 
+                    "Impresión": "(print \"El precio total es de: ~d\" sum)"
+                },
+            "5": 2
+        }
+    }
+]

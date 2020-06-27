@@ -13,6 +13,7 @@ const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-acce
 ///////Initialation
 const app = express();
 const server = http.createServer(app);
+require('dotenv').config({ path: './src/variables.env'});  
 
 
 
@@ -52,7 +53,7 @@ const port = process.env.PORT || 2000;
 
 ////////Server listening con port, host & sockets
 server.listen(port,host, ()=> {
-    console.log('El servidor esta funcionando-sockets: '); 
+    console.log('El servidor esta funcionando '); 
 });
 
 
