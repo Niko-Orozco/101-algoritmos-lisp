@@ -25,3 +25,29 @@ descuento del 15%|#
 
 (Costo)
 
+#|Crear un algoritmo en Lisp que maneje el descuento sobre 
+un precio que el usuario ingresa, el descuento también lo 
+determina el usuario.|#
+
+(defun Descuentos()
+	(print "Ingrese el precio: ")
+	(setq precio (read))
+	(print "Ingrese el descuento sin el %: ")
+	(setq descuento (read))
+	(setq finalP (- precio (* precio (/ descuento 100))))
+)
+
+(Descuentos)
+
+#|Crear un algoritmo en Lisp que solo reciba números positivos, 
+una vez el usuario digite un número negativo finalice.|#
+
+(defun Positivos()
+	(setq value 2)
+	(while (> value 0)
+		(print "Ingrese un nuero positivo")
+		(set value (read))
+	)
+)
+
+(Positivos)

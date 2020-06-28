@@ -45,9 +45,10 @@ router.post('/algorithm/:id', (req, res) => {
 
 router.get('/algorithm/sgt/:id', (req, res) => {
     var mod = req.params.id;
+    var tope = parseInt(data[0][mod]["5"]);
     cnt+=1;
-    if(cnt >= 3){
-        cnt = 2;
+    if(cnt >= (tope+1)){
+        cnt = tope;
     }
     var enunciado=data[0][mod]["1"];
     var codigo=data[0][mod]["2"];
