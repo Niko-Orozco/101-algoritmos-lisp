@@ -9,7 +9,7 @@ router.get('/menu', (req, res) => {
 });
 
 router.post('/menu', (req, res) => {
-    res.redirect('modules/algoritmo');
+    res.redirect('modules/enunciado');
 });
 
 module.exports = router;
