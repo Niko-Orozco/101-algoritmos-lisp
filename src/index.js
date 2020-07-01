@@ -41,6 +41,7 @@ app.use(methodOverride('_method')); //para que los formularios puedan enviar met
 ///////// Routs
 app.use(require('./routes/index'));
 app.use(require('./routes/menu'));
+app.use(require('./routes/enunciado'));
 app.use(require('./routes/algorithm'));
 
 //////// Static Files

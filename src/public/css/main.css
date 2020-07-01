@@ -67,6 +67,10 @@ footer{
     display:block;
 }
 
+rect:hover{
+  fill: #ffffff;
+}
+
 /*Estilos para el Nav:*/
 .navbar {
     background: url("../images/fondo.png");
@@ -84,6 +88,27 @@ footer{
     background-color: rgb(255, 255, 255);/*Mouse encima*/
   }
   
+  .bt{
+    float: left;
+  }
+
+  .bt1{
+    float: right;
+  }
+
+  @media(max-width: 1298px){
+    .bt{
+      float: none;
+      margin-top: 0px;
+    }
+
+    .bt1{
+      float: none;
+      margin-top: 0px;
+    }
+
+  }
+
   @media (max-width: 575px) {
     .navbar-expand-sm .navbar-nav .show .dropdown-menu .dropdown-item {
       color: #fffefe;
@@ -139,6 +164,8 @@ footer{
       background-color: #e5dce9;
     }
   }
+
+ 
   
   .navbar-expand .navbar-nav .show .dropdown-menu .dropdown-item {
     color: #fffefe;
