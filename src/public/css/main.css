@@ -5,6 +5,10 @@
   font-family: lucitana;
 }
 
+.linea_codigo{
+  background-color: blue;
+}
+
 .Steps_flex_horizontales{
   display: flex;
   flex-direction: column;
@@ -35,13 +39,12 @@ label{
 
 .algoritmos{
   margin: 1rem;
-  border: 2px solid #ccc;
+  /*border: 2px solid #ccc;*/
   justify-content: center;
   text-align: center;
   padding: 40px;
   display: block;
   margin-bottom: -50px;
-  margin-top: 25px;
 }
 
 footer{
