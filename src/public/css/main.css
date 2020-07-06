@@ -29,7 +29,7 @@ textarea{
   background-color: #a6c4e217;
   width: 100%;
   color:black;
-  border-color: #a6c4e2d0;
+  border-color: #a6c4e2d0;-
 }
 
 label{
@@ -104,12 +104,10 @@ rect:hover{
       float: none;
       margin-top: 0px;
     }
-
     .bt1{
       float: none;
       margin-top: 0px;
     }
-
   }
 
   @media (max-width: 575px) {
