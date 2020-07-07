@@ -7,6 +7,7 @@ resta de (a – b) y (c -d), donde a, b, c y d son iguales a
 
 #|Construir un algoritmo en Lisp que eleve el numero 8 a la 
 potencia 3, luego dividir por (2 * 7).|#
+
 (defvar pot (expt 8 3))
 (defvar div (/ pot (* 2 7)))
 
@@ -61,32 +62,6 @@ determina el usuario.|#
 
 (Descuentos)
 
-#|Construir un algoritmo F1 que calcule la media de los 
-cuadrados de las ra ́ıces de la ecuacíon ax2+bx+c = 0.
-Por ejemplo:   (F1 1 -5 6) ---> 6.5|#
-
-(defun CUADRADO (X)
-	(* X X)
-)
-
-(defun MEDIA (X Y)
-	(/ (+ X Y) 2)
-)
-
-(defun MEDIA-CUADRADO (X Y)
-	(MEDIA (CUADRADO X) (CUADRADO Y))
-)
-
-(defun F1 (A B C)
-	(let (
-			(AUX1 (- B))
-			(AUX2 (SQRT (- (* B B)(* 4 A C))))
-			(AUX3 (* 2 A))
-		)
-		(MEDIA-CUADRADO  (/ (+ AUX1 AUX2) AUX3)(/ (- AUX1 AUX2) AUX3))
-	)
-)
-
 #|Crear un algoritmo en Lisp que valide si un número ingresado 
 es par o impar.|#
 
@@ -101,29 +76,139 @@ es par o impar.|#
 
 (ParImpar)
 
+#|Crear un algoritmo en Lisp que capture las notas de un 
+estudiante y determine si el estudiante aprobó la materia, 
+se aprueba con una nota mayor a 3.0, el rango de calificación 
+es de 0 hasta 5.|#
 
-#|   |#
+(defun NotasEstudiante()
+	(print "Ingrese la nota 1: ")
+	(setq nota1 (read))
+	(print "Ingrese la nota 2: ")
+	(setq nota2 (read))
+	(print "Ingrese la nota 3: ")
+	(setq nota3 (read))
+	(if (< (+ nota1 nota2 nota3) 2.9)
+		(print "Aprobó la materia")
+		(print "Reprobó la materia")
+	)
+)
 
+(NotasEstudiante)
 
-#|   |#
+#|Crear un algoritmo en Lisp que lea tres números por 
+consola e imprima solo el número mayor entre los 
+ingresados.|#
 
+(defun mayorde3()
+	(print "Ingrese el primer numero: ")
+	(setq n1 (read))
+	(print "Ingrese el segundo numero: ")
+	(setq n2 (read))
+	(print "Ingrese el tercer numero: ")
+	(setq n3 (read))
+	(if (> n1 n2)
+		(print "El numero mayor es: ~a" n1)
+		(if (> n2 n3)
+			(print "El numero mayor es: ~a" n2)
+			(print "El numero mayor es: ~a" n3)
+		)
+	)
+)
 
-#|   |#
-
-
+(mayorde3)
 
 #|Crear un algoritmo en Lisp que solo reciba números positivos, 
 una vez el usuario digite un número negativo finalice.|#
 
-(defun Positivos()
-	(setq value 2)
-	(while (> value 0)
-		(print "Ingrese un nuero positivo")
-		(set value (read))
+(defun Positivos(value)
+	(cond 
+		((> value 0)
+			(print "Ingrese un nuero positivo: ")
+			(set value (read))
+			(Positivos value)
+		)
+		((print "Numero negativo."))
 	)
 )
 
-(Positivos)
+(Positivos 2)
+
+#|Crear un algoritmo en Lisp que lea N números, realice la 
+sumatoria de estos y los promedie, imprima dichos resultados.|#
+
+(defun Sumatoria(n sum tope)
+	(cond 
+		((> n 1)
+			(print "Ingrese un nuero: ")
+			(setq value (read))
+			(Sumatoria (- n 1) (+ sum value) tope)
+		)
+		(
+			(print "La sumatoria es: ~a" sum)
+			(print "El promedio es: ~a" (/ sum tope))
+		)
+	)
+)
+
+(defun main()
+	(print "ingrese la cantidad de numeros a sumar: ")
+	(setq tope (read))
+	(Sumatoria tope 0 tope)
+)
+
+(main)
+
+
+
+
+#|Crear un algoritmo en Lisp que imprima un triángulo de 
+asteriscos, la base de dicho triangulo estará dada por un 
+número que se lee por consola.|#
+
+(defun triangulo()
+	(print "ingrese la base para el triangulo: ")
+	(setq base (read))
+	(setq aux base)
+	(setq i 1)
+	(loop for q from 1 to aux
+		do(loop for a from 0 to base
+			do (print " ")
+		)
+		do(loop for b from 0 to i
+			do (print "*")
+		)
+		do(terpri)
+		do(setq base (- base 1))
+		do(setq i + i 1)
+	)
+)
+
+(triangulo)
+
+
+#|Construir un algoritmo en Lisp que imprima un cuadrado de lado 
+N, el cuadrado está construido a partir de una secuencia desde
+el número uno hasta el número N ingresado por el usuario.
+Ejemplo: N=2
+Como N es igual a 2, se realiza un cuadrado 2x2:
+1 2
+1 2|#
+
+(defun Cuadrado()
+	(print "Ingrese el tamaño: ")
+	(setq tam (read))
+	(loop for i from 1 to tam
+		do(loop for j from 1 to tam
+			do(princ j)
+            do(princ " ")
+		)
+        do(terpri)
+	)
+)
+
+(Cuadrado)
+
 
 #|   |#
 
@@ -142,9 +227,30 @@ una vez el usuario digite un número negativo finalice.|#
 
 #|   |#
 
+#|Construir un algoritmo F1 que calcule la media de los 
+cuadrados de las ra ́ıces de la ecuacíon ax2+bx+c = 0.
+Por ejemplo:   (F1 1 -5 6) ---> 6.5|#
 
-#|   |#
+(defun cuadrado (x)
+	(* x x)
+)
 
+(defun media (x y)
+	(/ (+ x y) 2)
+)
 
-#|   |#
+(defun media_cuadrado (x y)
+	(media (cuadrado x) (cuadrado y))
+)
 
+(defun F1 (a b c)
+	(let (
+			(aux1 (- b))
+			(aux2 (sqrt (- (* b b)(* 4 a c))))
+			(aux3 (* 2 a))
+		)
+		(media_cuadrado  (/ (+ aux1 aux2) aux3)(/ (- aux1 aux2) aux3))
+	)
+)
+
+(F1 2 -4 3)
