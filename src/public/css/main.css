@@ -70,6 +70,13 @@ footer{
     display:block;
 }
 
+.editor {
+  border: 1px solid;
+}
+
+#Editor {
+  height: 200px;
+}
 rect:hover{
   fill: #ffffff;
 }

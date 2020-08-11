@@ -1,6 +1,28 @@
 [
     {
         "Asignación":" Se usa la palabra reservada setq para crear y asignar valores a una variable local",
-        "Impresión":"Se usa la palabra reservada print. Entre comillas dobles se coloca el mensaje a imprimir.\nPara imprimir variables se coloca dentro de las comillas el simbolo ~ seguido del correspondiente identificador tipo de dato"
+
+        "Condicional":"",
+        "CondiAnidado":"",
+
+        "Div":"",
+
+        "Expt":"Se usa la palabra reservada expt para elevar un número a una potencia determinada. Ejemplo:\n (expt a b)\n donde a corresponde al valor a elevar y b a el valor del\nexponente\n\n(exponente 2 3)\nEl cual hace referencia a elevar 2 a la 3",
+
+        "Funcion": "",
+
+        "Impresión":"Se usa la palabra reservada print. Entre comillas dobles se coloca el mensaje a imprimir.\nPara imprimir variables se coloca dentro de las comillas el simbolo ~ seguido del correspondiente identificador tipo de dato",
+        
+        "Lectura": "",
+        "Llamado":"",
+        
+        "Mult":"",
+
+        "Resta":"",
+
+        "Suma":""
+        
+        
+        
     }
 ]

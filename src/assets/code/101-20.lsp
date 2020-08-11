@@ -18,7 +18,7 @@ ingresados por consola, luego imprimir el resultado de dicha suma.|#
 	(setq a (read))
 	(print "ingrese el valor de b")
 	(setq b (read))
-	(print "La suma es: ~d" (+ b d))
+	(print "La suma es: ~d" (+ a b))
 )
 
 (Suma)
@@ -88,7 +88,7 @@ es de 0 hasta 5.|#
 	(setq nota2 (read))
 	(print "Ingrese la nota 3: ")
 	(setq nota3 (read))
-	(if (< (+ nota1 nota2 nota3) 2.9)
+	(if (> (+ nota1 nota2 nota3) 2.9)
 		(print "Aprobó la materia")
 		(print "Reprobó la materia")
 	)
@@ -118,6 +118,31 @@ ingresados.|#
 
 (mayorde3)
 
+#|Crear un algoritmo en Lisp que reciba un número dentro del rango
+1 a 12 y de acuerdo al número imprima el mes correspondiente.|#
+
+(defun Mes()
+	(print "Ingrese un numero entre el 1 y el 12: ")
+	(setq mes (read))
+	(cond
+		((= mes 1)(print "mes de Enero"))
+		((= mes 2)(print "mes de Febrero"))
+		((= mes 3)(print "mes de Marzo"))
+		((= mes 4)(print "mes de Abril"))
+		((= mes 5)(print "mes de Mayo"))
+		((= mes 6)(print "mes de Junio"))
+		((= mes 7)(print "mes de Julio"))
+		((= mes 8)(print "mes de Agosto"))
+		((= mes 9)(print "mes de Septiembre"))
+		((= mes 10)(print "mes de Octubre"))
+		((= mes 11)(print "mes de Noviembre"))
+		((= mes 12)(print "mes de Diciembre"))
+	)
+
+)
+
+(Mes)
+
 #|Crear un algoritmo en Lisp que solo reciba números positivos, 
 una vez el usuario digite un número negativo finalice.|#
 
@@ -133,6 +158,24 @@ una vez el usuario digite un número negativo finalice.|#
 )
 
 (Positivos 2)
+
+
+#|Escribir un algoritmo sencillo en Lisp que lea una de las 5 
+vocales e imprima en qué posición del alfabeto se encuentra.|#
+
+(defun vocales()
+	(print "ingrese una vocal: ")
+	(setq vocal (read))
+	(cond
+		((= vocal "a") (print "La vocal esta en la posicion 1"))
+		((= vocal "e") (print "La vocal esta en la posicion 2"))
+		((= vocal "i") (print "La vocal esta en la posicion 3"))
+		((= vocal "o") (print "La vocal esta en la posicion 4"))
+		((= vocal "u") (print "La vocal esta en la posicion 5"))
+	)
+)
+
+(vocales)
 
 #|Crear un algoritmo en Lisp que lea N números, realice la 
 sumatoria de estos y los promedie, imprima dichos resultados.|#
@@ -160,6 +203,23 @@ sumatoria de estos y los promedie, imprima dichos resultados.|#
 (main)
 
 
+#|Crear un algoritmo en Lisp que realice una multiplicación a partir de sumas.|#
+
+(defun Multiplicacion_Sumas()
+	(print "Ingrese el primer numero: ")
+	(setq num1 (read))
+	(print "Ingrese el segundo numero: ")
+	(setq num2 (read))
+	(setq resultado 0)
+	(loop for i from 1 to num2
+		do(
+			(set resultado (+ resultado num1))
+		)
+	)
+	(print "La multiplicacion es: ~a" resultado)
+)
+
+(Multiplicacion_Sumas)
 
 
 #|Crear un algoritmo en Lisp que imprima un triángulo de 
@@ -210,20 +270,66 @@ Como N es igual a 2, se realiza un cuadrado 2x2:
 (Cuadrado)
 
 
-#|   |#
+#|Crear un menú de opciones en Lisp que imprima la opción seleccionada, 
+el objetivo de esto, es crear una plantilla modelo para cuando se tenga 
+un menú de opciones. |#
 
+(defun menu()
+	(print "1) opcion 1")
+	(print "2) opcion 2")
+	(print "3) opcion 3")
+	(print "Ingrese el numero correspondiente a la opcion: ")
+	(setq opc (read))
+	(cond
+		((= opc 1) (print "La opcion seleccionada es la: 1"))
+		((= opc 2) (print "La opcion seleccionada es la: 2"))
+		((= opc 3) (print "La opcion seleccionada es la: 3"))
+	)
+)
 
-#|   |#
+(menu)
 
+#|Crear un menú en Lisp que permita seleccionar al usuario que operación
+realizar sobre dos números que son leídos por consola.\nLas opciones 
+son: sumar, multiplicar, y restar.|#
+(defun Suma()
+	(print "ingrese el valor de a")
+	(setq a (read))
+	(print "ingrese el valor de b")
+	(setq b (read))
+	(print "La suma es: ~d" (+ a b))
+)
 
-#|   |#
+(defun Resta()
+	(print "ingrese el valor de a")
+	(setq a (read))
+	(print "ingrese el valor de b")
+	(setq b (read))
+	(print "La resta es: ~d" (+ a b))
+)
 
+(defun Multiplicacion()
+	(print "ingrese el valor de a")
+	(setq a (read))
+	(print "ingrese el valor de b")
+	(setq b (read))
+	(print "La multiplicacion es: ~d" (+ a b))
+)
 
-#|   |#
+(defun menu()
+	(print "1) Suma")
+	(print "2) Resta")
+	(print "3) Multiplicacion")
+	(print "Ingrese el numero correspondiente a la opcion: ")
+	(setq opc (read))
+	(cond
+		((= opc 1) (Suma))
+		((= opc 2) (Resta))
+		((= opc 3) (Multiplicacion))
+	)
+)
 
-
-#|   |#
-
+(menu)
 
 #|   |#
 
