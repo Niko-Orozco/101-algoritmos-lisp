@@ -26,7 +26,7 @@ router.get('/paso_a_paso/:id', (req, res) => {
 
 router.post('/paso_a_paso/:id', (req, res) => {
     var mod = req.params.id;
-    cnt+=1;
+    cnt=1;
     var enunciado=data[0][mod]["1"];
     var codigo=data[0][mod]["3"];
     var tema=data[0][mod]["4"][cnt];

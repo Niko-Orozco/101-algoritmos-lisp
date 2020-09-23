@@ -4,7 +4,6 @@ const data = require('../assets/data/algoritmos.json');
 
 router.get('/algorithm/:id', (req, res) => {
     var mod = req.params.id;
-    console.log(req)
     var enunciado=data[0][mod]["1"];
     var pseudocodigo=data[0][mod]["2"];
     res.render('modules/enunciado', {mod, enunciado, pseudocodigo});

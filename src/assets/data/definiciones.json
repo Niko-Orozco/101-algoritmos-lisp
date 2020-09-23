@@ -20,7 +20,7 @@
 
         "Resta":"",
 
-        "Suma":""
+        "Suma":"Se usa el simbolo \" + \"como operacion para la suma de uno o mas valores. Ejemplo: (+ a b c) de esta manera se suman dichas variables."
         
         
         
