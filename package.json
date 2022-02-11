@@ -25,7 +25,7 @@
     "ace-builds": "^1.4.12",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "express-handlebars": "^4.0.4",
+    "express-handlebars": "^5.3.1",
     "http": "0.0.1-security",
     "method-override": "^3.0.0",
     "morgan": "^1.10.0",
